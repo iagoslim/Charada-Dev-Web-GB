@@ -3,14 +3,26 @@ import './App.css'
 import BasicGrid from './Grid'
 import Teclado from './TecladoModelo'
 
-function App() {
-  const [count, setCount] = useState(0)
+const matriz = [
+  [" ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " "],
+];
 
+
+function App() {
   return (
     <div className="App">
       <header className="App-header">
         <p>CHARADA</p>
-        <BasicGrid/>
+        <BasicGrid palavra = '     '/>
+        <BasicGrid palavra = '     '/>
+        <BasicGrid palavra = '     '/>
+        <BasicGrid palavra = '     '/>
+        <BasicGrid palavra = '     '/>
         <p>
         <Teclado/>
         </p>

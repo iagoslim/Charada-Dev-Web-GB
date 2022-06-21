@@ -24,3 +24,27 @@ button {
   font-size: calc(10px + 2vmin);
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 10px;
+  row-gap: 50px;
+
+  
+}
+
+.quadrado{
+  border: 0;
+  background-color: white;
+  height: 58px;
+  min-Width: 43px;
+  margin: 0 6px 10px 0;
+  padding: 1px 6px;
+  color: black;
+  font-Weight: bold;
+  font-Size: 14px;
+  justify-Content: center;
+  display: flex;
+  align-items: center;
+}
+

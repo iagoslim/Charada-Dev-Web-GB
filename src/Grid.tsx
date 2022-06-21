@@ -1,64 +1,54 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import { Grid } from "@mui/material";
+import './App.css'
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+interface BasicGridProps{
+  palavra: string;
+}
 
+  export default function BasicGrid({palavra=""}:BasicGridProps) {
 
-function FormRow() {
+    const letras = palavra.split("");
     return (
-      <React.Fragment>
-        <Grid item xs={2}>
-          <Item>Char</Item>
-        </Grid>
-        <Grid item xs={2}>
-          <Item>Char</Item>
-        </Grid>
-        <Grid item xs={2}>
-          <Item>Char</Item>
-        </Grid>
-        <Grid item xs={2}>
-          <Item>Char</Item>
-        </Grid>
-        <Grid item xs={2}>
-          <Item>Char</Item>
-        </Grid>
-      </React.Fragment>
-    );
-  }
+      <div className="grid-container">
+          {letras.map((letra: string) => {
+            return(
+              <span className="quadrado">
+                  {letra}
+              </span>
+          )  
+          })}
+      </div>
 
-  
-  export default function BasicGrid() {
-    return (
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={1} xs={3} >
-          <Grid container item spacing={1}>
-            <FormRow />
-          </Grid>
-          <Grid container item spacing={1}>
-            <FormRow />
-          </Grid>
-          <Grid container item spacing={1}>
-            <FormRow />
-          </Grid>
-          <Grid container item spacing={1}>
-            <FormRow />
-          </Grid>
-          <Grid container item spacing={1}>
-            <FormRow />
-          </Grid>
-          <Grid container item spacing={1}>
-            <FormRow />
-          </Grid>
-        </Grid>
-      </Box>
+      /*
+      <div>
+        {matriz.map((linha) => {
+          return (
+            <div>
+              {linha.map((tecla) => {
+                return (
+                  <div
+                    style={{
+                      border: 0,
+                      backgroundColor: "#818384",
+                      borderRadius: "4px",
+                      height: "58px",
+                      minWidth: "43px",
+                      margin: "0 6px 10px 0",
+                      padding: "1px 6px",
+                      cursor: "pointer",
+                      color: "white",
+                      fontWeight: "bold",
+                      fontSize: "14px",
+                    }}
+                  >
+                    {tecla}
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+      */
     );
   }
