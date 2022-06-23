@@ -1,15 +1,17 @@
+
 const teclado = [
   ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
   ["A", "S", "D", "F", "G", "H", "J", "K", "L", "Ç"],
   ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "DELETE [X]"],
 ];
 
+ 
 
-function apertouTecla(tecla: any) {
-  alert(`apertou uma tecla ${tecla}`);
-}
 
 export default function Teclado() {
+
+
+  
   return (
     <div>
       {teclado.map((linha) => {
@@ -17,7 +19,7 @@ export default function Teclado() {
           <div>
             {linha.map((tecla) => {
               return (
-                <button onClick={() => apertouTecla(tecla)}
+                <button 
                   style={{
                     border: 0,
                     backgroundColor: "#818384",
