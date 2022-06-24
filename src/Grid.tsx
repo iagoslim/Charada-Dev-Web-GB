@@ -5,20 +5,16 @@ interface BasicGridProps{
   palavra: string;
 }
 
+  export default function BasicGrid({palavra=""}:BasicGridProps) {
 
-
-
-
-  export default function BasicGrid({palavra}:BasicGridProps) {
-
-    let palavraMontada = palavra.split("");
+    const letras = palavra.split("");
     return (
-      <div className="grid grid-flow-row grid-cols-5 my-2 mx-4 gap-2">
-          {palavraMontada.map((letra: string) => {
+      <div className="grid-container">
+          {letras.map((letra: string) => {
             return(
-              <div key={letra} className="w-12 h-12 border-solid border-2 flex items-center justify-center mx-0.5 text-3xl font-bold rounded shadowed bg-gray-300 text-black border-violet-400 ">
+              <span className="quadrado">
                   {letra}
-              </div>
+              </span>
           )  
           })}
       </div>
