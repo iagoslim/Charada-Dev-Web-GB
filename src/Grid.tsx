@@ -1,54 +1,38 @@
-import { Grid } from "@mui/material";
 import './App.css'
 
 interface BasicGridProps{
   palavra: string;
+  palavraCorreta: string;
+  valida: boolean;
 }
 
-  export default function BasicGrid({palavra=""}:BasicGridProps) {
+  export default function BasicGrid(props:BasicGridProps) {
+    const letras = props.palavra.split("");
+    const correta = props.palavraCorreta.split("");
+    
+    function setCor(index: number){
+      if(!props.valida){
+        return "#FFFFFF"
+      }
+      if(!correta.includes(letras[index].toLocaleLowerCase())){
+        return "#B0C4DE"
+      }
+      if(letras[index] === correta[index].toUpperCase() ){
+        return "#61CA90"  
+      }
+      return "#FFFF00"
+    }
 
-    const letras = palavra.split("");
     return (
       <div className="grid-container">
-          {letras.map((letra: string) => {
+          {letras.map((letra: string, index:number) => {
             return(
-              <span className="quadrado">
+                <span className="quadrado" key={index}  style={{backgroundColor: setCor(index)}}>
                   {letra}
-              </span>
-          )  
+                </span>       
+            )
           })}
       </div>
 
-      /*
-      <div>
-        {matriz.map((linha) => {
-          return (
-            <div>
-              {linha.map((tecla) => {
-                return (
-                  <div
-                    style={{
-                      border: 0,
-                      backgroundColor: "#818384",
-                      borderRadius: "4px",
-                      height: "58px",
-                      minWidth: "43px",
-                      margin: "0 6px 10px 0",
-                      padding: "1px 6px",
-                      cursor: "pointer",
-                      color: "white",
-                      fontWeight: "bold",
-                      fontSize: "14px",
-                    }}
-                  >
-                    {tecla}
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
-      </div>
-      */
     );
   }

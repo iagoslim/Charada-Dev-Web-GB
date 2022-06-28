@@ -48,9 +48,9 @@ function App() {
     }
     
       else if(tecla === "ENTER" && coluna === 5){
+        setLinha(linha+1);
         if (validaTentativa(tentativa) === false){
           if(linha < 5){
-            setLinha(linha+1);
             setTentativa([" ", " ", " ", " ", " "]);
             setColuna(0);
           }else{
@@ -80,6 +80,7 @@ function App() {
       return false;
     }
   }
+
   function novoJogo(){
     setIsGameOver(false)
     setIsGameWin(false)
@@ -96,6 +97,7 @@ function App() {
     setTentativa([" ", " ", " ", " ", " "])
     palavraCorreta = palavraRandom()
   }
+
   return (
     <div className="App">
             {isGameOver && (
@@ -113,15 +115,13 @@ function App() {
             </div>
           )}
       <header className="App-header">
-
-
         <p>CHARADA</p>
-        <BasicGrid palavra={matriz[0].join("")}/>
-        <BasicGrid palavra={matriz[1].join("")}/>
-        <BasicGrid palavra={matriz[2].join("")}/>
-        <BasicGrid palavra={matriz[3].join("")}/>
-        <BasicGrid palavra={matriz[4].join("")}/>
-        <BasicGrid palavra={matriz[5].join("")}/>
+        <BasicGrid palavra={matriz[0].join("")} palavraCorreta={palavraCorreta} valida = {(linha > 0)}/>
+        <BasicGrid palavra={matriz[1].join("")} palavraCorreta={palavraCorreta} valida = {(linha > 1)}/>
+        <BasicGrid palavra={matriz[2].join("")} palavraCorreta={palavraCorreta} valida = {(linha > 2)}/>
+        <BasicGrid palavra={matriz[3].join("")} palavraCorreta={palavraCorreta} valida = {(linha > 3)}/>
+        <BasicGrid palavra={matriz[4].join("")} palavraCorreta={palavraCorreta} valida = {(linha > 4)}/>
+        <BasicGrid palavra={matriz[5].join("")} palavraCorreta={palavraCorreta} valida = {(linha > 5)}/>
         <p>
         <Teclado onKeyPress={handleKeyPress}/>
         </p>
