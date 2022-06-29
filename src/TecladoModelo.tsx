@@ -13,20 +13,8 @@ export default function Teclado(props: any) {
           <div>
             {linha.map((tecla) => {
               return (
-                <button onClick={() => props.onKeyPress(tecla)}
-                  style={{
-                    border: 0,
-                    backgroundColor: "#818384",
-                    borderRadius: "4px",
-                    height: "58px",
-                    minWidth: "43px",
-                    margin: "0 6px 10px 0",
-                    padding: "1px 6px",
-                    cursor: "pointer",
-                    color: "white",
-                    fontWeight: "bold",
-                    fontSize: "14px",
-                  }}
+                <button className="tecla" onClick={() => props.onKeyPress(tecla)}
+
                 >
                   {tecla}
                 </button>

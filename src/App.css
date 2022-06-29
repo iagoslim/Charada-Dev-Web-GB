@@ -31,11 +31,12 @@ button {
   column-gap: 10px;
   row-gap: 50px;
 
-  
+
 }
 
-.quadrado{
-  border: 0;
+.quadrado {
+  border: solid 3px black;
+  border-radius: 0.5rem;
   background-color: white;
   height: 58px;
   min-Width: 43px;
@@ -43,12 +44,35 @@ button {
   padding: 1px 6px;
   color: black;
   font-Weight: bold;
-  font-Size: 14px;
+  font-Size: 1.875rem;
   justify-Content: center;
   display: flex;
   align-items: center;
 }
-.game-over{
+
+.tecla {
+  border: solid 1px #666666;
+  background-color: #818384;
+  border-radius: 0.5rem;
+  height: 58px;
+  min-Width: 43px;
+  margin: 0 6px 10px 0;
+  padding: 1px 6px;
+  cursor: pointer;
+  color: black;
+  font-Weight: bold;
+  font-Size: 14px;
+}
+
+.tecla:hover {
+  background-color: #b4b4b4;
+  color: white;
+  border: solid 2px #adadad;
+
+
+}
+
+.game-over {
   text-transform: uppercase;
   font-weight: bold;
   position: absolute;
@@ -58,13 +82,13 @@ button {
   top: 25%;
   margin-left: auto;
   margin-right: auto;
-  width:345px;
+  width: 345px;
   padding: 24px;
   border: solid 4px;
   border-color: crimson;
 }
 
-.game-win{
+.game-win {
   text-transform: uppercase;
   font-weight: bold;
   position: absolute;
@@ -74,8 +98,31 @@ button {
   top: 25%;
   margin-left: auto;
   margin-right: auto;
-  width:345px;
+  width: 345px;
   padding: 24px;
   border: solid 4px;
   border-color: green;
+}
+
+.short-word {
+  display: flex;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #BE123C;
+  margin-left: auto;
+  margin-right: auto;
+  width: 345px;
+  font-size: medium;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.close{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  color: white;
+  padding: 0;
 }

@@ -15,12 +15,12 @@ interface BasicGridProps{
         return "#FFFFFF"
       }
       if(!correta.includes(letras[index].toLocaleLowerCase())){
-        return "#B0C4DE"
+        return "#94A3B8"
       }
       if(letras[index] === correta[index].toUpperCase() ){
-        return "#61CA90"  
+        return "#22C55E"  
       }
-      return "#FFFF00"
+      return "#EAB308"
     }
 
     return (
