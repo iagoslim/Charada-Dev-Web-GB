@@ -3,6 +3,8 @@ Trabalho para a disciplina de Desenvolvimento para a Web
 
 
 Team:
-Alisson Ramos e Iago Slim 
+<a href="https://github.com/AlissonRC">
+  Alisson Ramos da Cruz
+</a> e Iago Slim 
 <br>
 Link app : https://wordle-clone-charada.vercel.app
