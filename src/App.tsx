@@ -5,6 +5,7 @@ import Teclado from './TecladoModelo'
 import { palavraRandom, getAllPalavras } from './listaDePalavras'
 
 let palavraCorreta = palavraRandom();
+//let palavraCorreta = "AABCB"
 
 function App() {
   const [isInvalidWord, setIsInvalidWord] = useState(false)
@@ -25,7 +26,7 @@ function App() {
 
 
   function validateValidWord(){
-    let isValidWord = false
+/*    let isValidWord = false
     getAllPalavras().map((palavra)=>{
       if(palavra.toUpperCase() === tentativa.toString().replaceAll(',','')){
         isValidWord = true   
@@ -34,6 +35,8 @@ function App() {
      
     })
     return isValidWord
+ */
+    return true
   }
 
 
