@@ -2,4 +2,6 @@
 Trabalho para a disciplina de Desenvolvimento para a Web
 
 
-Dupla: Alisson Ramos e Iago Slim
+Team:
+Alisson Ramos e Iago Slim
+Link app : https://wordle-clone-charada.vercel.app
